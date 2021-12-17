@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kenshi Roll</title>
+    <script src="app.js" async></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="title">
+        <img src="./kenshi-logo.png" alt="Kenshi Logo" class="logo" />
+        <!-- <div>Kenshi</div> -->
+        <!-- <div>Playthrough Roulette</div> -->
+      </section>
+      <section class="settings">
+        <div>Hit the button below to roll the dice!</div>
+        <div><button class="btn" id="roll-btn">Roll!</button></div>
+      </section>
+      <div class="card-area">
+        <section class="card">
+          <div class="card-title">Who are you?</div>
+          <div class="card-body" id="race-roll">Race/Gender</div>
+        </section>
+        <section class="card">
+          <div class="card-title">Weapon of Choice</div>
+          <div class="card-body" id="weapon-roll">Primary Weapon</div>
+        </section>
+        <section class="card">
+          <div class="card-title">Protection of Choice</div>
+          <div class="card-body" id="armour-roll">Armour Type</div>
+        </section>
+        <section class="card">
+          <div class="card-title">Where do you belong?</div>
+          <div class="card-body" id="faction-roll">Faction</div>
+        </section>
+        <section class="card">
+          <div class="card-title">How do you live?</div>
+          <div class="card-body" id="income-roll">Job/Source of Cats</div>
+        </section>
+        <div class="card-area">
+          <section class="card">
+            <div class="card-title">Quirk 1</div>
+            <div class="card-sub" id="q1-roll-name"></div>
+            <div class="card-body" id="q1-roll-desc"></div>
+          </section>
+          <section class="card">
+            <div class="card-title">Quirk 2</div>
+            <div class="card-sub" id="q2-roll-name"></div>
+            <div class="card-body" id="q2-roll-desc"></div>
+          </section>
+          <section class="card">
+            <div class="card-title">Quirk 3</div>
+            <div class="card-sub" id="q3-roll-name"></div>
+            <div class="card-body" id="q3-roll-desc"></div>
+          </section>
+          <section class="card">
+            <div class="card-title">Information</div>
+            <div class="card-sub" id=""></div>
+            <div class="card-body" id="info-body"></div>
+          </section>
+        </div>
+      </div>
+      <footer>Concept from "u/hand_is_gf"</footer>
+    </div>
+  </body>
+</html>
