@@ -233,6 +233,8 @@ let dom3QuirkDesc = document.getElementById("q3-roll-desc");
 
 let infoBody = document.getElementById("info-body");
 
+let storySection = document.getElementById("story-section");
+
 rollBtn.addEventListener("click", function () {
   rollStory();
 });

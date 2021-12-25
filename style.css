@@ -15,18 +15,18 @@
 
 html {
   min-height: 100%;
-  background-image: url(./background2.jpg);
+  /* background-image: url(./background4.jpg);
   background-repeat: no-repeat;
   background-size: auto;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  /* background: -webkit-linear-gradient(to bottom, #657e7f, #d6ac4f);
+  background-size: cover; */
+  background: -webkit-linear-gradient(to bottom, #657e7f, #d6ac4f);
   background: -moz-linear-gradient(to bottom, #657e7f, #d6ac4f);
   background: -ms-linear-gradient(to bottom, #657e7f, #d6ac4f);
   background: -o-linear-gradient(to bottom, #657e7f, #d6ac4f);
-  background: linear-gradient(to bottom, #657e7f, #d6ac4f); */
+  background: linear-gradient(to bottom, #657e7f, #d6ac4f);
 }
 
 body {
@@ -114,6 +114,13 @@ body {
 
 .card-body {
   padding: 0 var(--custom-padding);
+}
+
+#spacer {
+  display: flex;
+  height: 100px;
+  /* background-color: black; */
+  /* flex-grow: 5; */
 }
 
 footer {
