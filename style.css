@@ -1,6 +1,6 @@
 * {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Roboto", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+    sans-serif;
   padding: 0px;
   margin: 0px;
   color: white;
@@ -11,6 +11,7 @@
   --custom-radius: 10px;
   --custom-margin: 0.25rem;
   --custom-padding: 0.5rem;
+  --custom-alpha: 0.7;
 }
 
 html {
@@ -31,26 +32,29 @@ html {
 
 body {
   /* width: 100%; */
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
+  background-image: url(./kenshi_landscape.jpg);
+
   /* background-image: url(./background1.jpg); */
-  /* 
   background-repeat: no-repeat;
   background-position: center;
 
   background-size: cover;
-  background-color: #9db286; */
+  background-color: #9db286;
 }
 
 .logo {
   width: 20rem;
+
   margin-left: auto;
   margin-right: auto;
   /* background-color: rgba(157, 178, 134, 0.5); */
 }
 
 .container {
+  padding: 0 2rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -62,17 +66,24 @@ body {
 }
 
 .btn {
-  background-color: #312c2a;
-  border: #070200 2px solid;
-  font-size: 1rem;
+  border-radius: var(--custom-radius);
+
+  background-color: green;
+  border: white 1px solid;
+  font-size: 3rem;
   width: 10rem;
   padding: var(--custom-padding);
-  margin: var(--custom-margin);
+  /* margin: var(--custom-margin); */
+  margin: 2rem;
 }
 
 .title {
   /* padding: var(--custom-padding); */
-  font-size: 1rem;
+  border-radius: var(--custom-radius);
+  margin: 2rem 0;
+  color: #312c2a;
+  background-color: rgba(0, 0, 0, var(--custom-alpha));
+  font-size: 3rem;
 }
 
 .settings {
@@ -82,53 +93,82 @@ body {
   text-align: center;
 }
 
+.settings-top {
+  background-color: rgba(0, 0, 0, var(--custom-alpha));
+  padding: 5px 10px;
+
+  border-radius: var(--custom-radius);
+}
+
 .card-area {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
   width: 100%;
+  gap: 0.5rem;
 }
 
 .card {
-  margin: var(--custom-margin);
+  /* margin: var(--custom-margin); */
+  flex-grow: 1;
   border-radius: var(--custom-radius);
-  border: black 1px solid;
+  overflow: hidden;
+  /* border: black 1px solid; */
   display: flex;
   flex-direction: column;
-  width: 20rem;
-  background-color: #50534b;
+  /* min-width: 20rem; */
 }
 
 .card-title {
   font-weight: bold;
-  text-decoration: underline;
-  border-bottom: #070200 1px solid;
-  padding: 0 var(--custom-padding);
+  font-size: 1.3rem;
+  padding: 5px 10px;
+  background-color: #50534b;
+
+  /* text-decoration: underline; */
+  /* border-bottom: #070200 1px solid; */
+  /* padding: 0 var(--custom-padding); */
 }
 
 .card-sub {
-  padding-top: var(--custom-padding);
+  /* padding-top: var(--custom-padding); */
+  font-size: 1.2rem;
+  text-decoration: underline;
+  margin: 5px 10px;
   font-weight: bold;
+}
+.card-bottom {
+  background-color: rgba(0, 0, 0, var(--custom-alpha));
+  /* padding-top: var(--custom-padding); */
+  /* margin: 5px 0; */
+  /* font-weight: bold; */
 }
 
 .card-body {
-  padding: 0 var(--custom-padding);
+  font-size: 1.1rem;
+
+  margin: 5px 10px;
+  /* padding: 0 var(--custom-padding); */
 }
 
 #spacer {
   display: flex;
-  height: 100px;
+  /* height: 100px; */
   /* background-color: black; */
-  /* flex-grow: 5; */
+  flex-grow: 5;
 }
 
 footer {
-  border: #070200 1px solid;
+  /* border: #070200 1px solid; */
   border-bottom: none;
-  margin-top: var(--custom-margin);
-  padding: 0 var(--custom-padding);
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
   background-color: #50534b;
   border-top-left-radius: var(--custom-radius);
   border-top-right-radius: var(--custom-radius);
+}
+
+.hide {
+  display: none;
 }

@@ -6,66 +6,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kenshi Roll</title>
     <script src="app.js" async></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EHS83N3NC7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-EHS83N3NC7");
+    </script>
   </head>
   <body>
     <div class="container">
       <section class="title">
-        <img src="./kenshi-logo.png" alt="Kenshi Logo" class="logo" />
+        <!-- <img src="./kenshi-logo.png" alt="Kenshi Logo" class="logo" /> -->
+        <div>Kenshi Random Story Generator</div>
         <!-- <div>Kenshi</div> -->
         <!-- <div>Playthrough Roulette</div> -->
       </section>
       <section class="settings">
-        <div>Hit the button below to roll the dice!</div>
+        <div class="settings-top">
+          Not sure how to play your next Kenshi Adventure? Look no further! Just hit "Roll" to generate a challenge for
+          you!
+        </div>
         <div><button class="btn" id="roll-btn">Roll!</button></div>
       </section>
       <div class="card-area">
         <section class="card">
           <div class="card-title">Who are you?</div>
-          <div class="card-body" id="race-roll">Race/Gender</div>
+          <div class="card-bottom">
+            <div class="card-body" id="race-roll">Race/Gender</div>
+          </div>
         </section>
         <section class="card">
           <div class="card-title">Weapon of Choice</div>
-          <div class="card-body" id="weapon-roll">Primary Weapon</div>
+          <div class="card-bottom">
+            <div class="card-body" id="weapon-roll">Primary Weapon</div>
+          </div>
         </section>
         <section class="card">
           <div class="card-title">Protection of Choice</div>
-          <div class="card-body" id="armour-roll">Armour Type</div>
+          <div class="card-bottom">
+            <div class="card-body" id="armour-roll">Armour Type</div>
+          </div>
         </section>
         <section class="card">
           <div class="card-title">Where do you belong?</div>
-          <div class="card-body" id="faction-roll">Faction</div>
+          <div class="card-bottom">
+            <div class="card-body" id="faction-roll">Faction</div>
+          </div>
         </section>
         <section class="card">
           <div class="card-title">How do you live?</div>
-          <div class="card-body" id="income-roll">Job/Source of Cats</div>
+          <div class="card-bottom">
+            <div class="card-body" id="income-roll">Job/Source of Cats</div>
+          </div>
         </section>
-        <div class="card-area">
+        <div class="card-area hide" id="quirk-area">
           <section class="card">
             <div class="card-title">Quirk 1</div>
-            <div class="card-sub" id="q1-roll-name"></div>
-            <div class="card-body" id="q1-roll-desc"></div>
+            <div class="card-bottom">
+              <div class="card-sub" id="q1-roll-name"></div>
+              <div class="card-body" id="q1-roll-desc"></div>
+            </div>
           </section>
           <section class="card">
             <div class="card-title">Quirk 2</div>
-            <div class="card-sub" id="q2-roll-name"></div>
-            <div class="card-body" id="q2-roll-desc"></div>
+            <div class="card-bottom">
+              <div class="card-sub" id="q2-roll-name"></div>
+              <div class="card-body" id="q2-roll-desc"></div>
+            </div>
           </section>
           <section class="card">
             <div class="card-title">Quirk 3</div>
-            <div class="card-sub" id="q3-roll-name"></div>
-            <div class="card-body" id="q3-roll-desc"></div>
+            <div class="card-bottom">
+              <div class="card-sub" id="q3-roll-name"></div>
+              <div class="card-body" id="q3-roll-desc"></div>
+            </div>
           </section>
-          <section class="card">
+          <section class="card hide" id="info-card">
             <div class="card-title">Information</div>
-            <div class="card-sub" id=""></div>
-            <div class="card-body" id="info-body"></div>
+            <div class="card-bottom">
+              <div class="card-sub" id=""></div>
+              <div class="card-body" id="info-body"></div>
+            </div>
           </section>
         </div>
       </div>
-      <div id="story-section">Story Section Here!</div>
+      <!-- <div id="story-section">Story Section Here!</div> -->
       <div id="spacer"></div>
-      <footer>Concept from "u/hand_is_gf"</footer>
+      <footer>Concept from reddit user "u/hand_is_gf".</footer>
     </div>
   </body>
 </html>

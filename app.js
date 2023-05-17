@@ -61,8 +61,7 @@ const incomeList = [
   "Farmer/Labourer",
   "Your Choice",
 ];
-const allWeaponsWarning =
-  "*Difference between lowest and highest weapon skill should be no more than 15.";
+const allWeaponsWarning = "*Difference between lowest and highest weapon skill should be no more than 15.";
 let quirkList = [
   {
     name: "Kral's Curse",
@@ -150,7 +149,7 @@ let quirkList = [
   },
   {
     name: "Thunderthighs",
-    desc: "You are 'dummy thi cc' and the constant clapping of your asscheeks prevents you from sneaking or stealing.",
+    desc: "You are 'dummy thicc' and the constant clapping of your asscheeks prevents you from sneaking or stealing.",
   },
   {
     name: "Private Harem",
@@ -170,7 +169,7 @@ let quirkList = [
   },
   {
     name: "Nemesis",
-    desc: "(You) wi II remember that. The first faction to attack you is your enemy for the rest of the run. No exceptions.",
+    desc: "(You) will remember that. The first faction to attack you is your enemy for the rest of the run. No exceptions.",
   },
   {
     name: "Heart of Darkness",
@@ -186,7 +185,7 @@ let quirkList = [
   },
   {
     name: "Hygenic",
-    desc: "Swim around in the river/ocean or stand in the rain for a while every week, This should Just be something you do regularly anon...",
+    desc: "Swim around in the river/ocean or stand in the rain for a while every week. This should just be something you do regularly honestly...",
   },
   {
     name: "Crustacean Carnage",
@@ -231,8 +230,10 @@ let dom2QuirkDesc = document.getElementById("q2-roll-desc");
 let dom3QuirkName = document.getElementById("q3-roll-name");
 let dom3QuirkDesc = document.getElementById("q3-roll-desc");
 
+let domInfoCard = document.getElementById("info-card");
 let infoBody = document.getElementById("info-body");
 
+let quirkArea = document.getElementById("quirk-area");
 let storySection = document.getElementById("story-section");
 
 rollBtn.addEventListener("click", function () {
@@ -283,6 +284,8 @@ function rollQuirks() {
   }
   if (domWeapon.innerText == "All Weapons*") {
     infoBody.innerText = allWeaponsWarning;
+  } else {
+    infoBody.innerText = "";
   }
 
   drawQuirks();
@@ -296,6 +299,14 @@ function drawQuirks() {
   dom2QuirkDesc.innerText = quirkList[quirk2Roll].desc;
   dom3QuirkName.innerText = quirkList[quirk3Roll].name;
   dom3QuirkDesc.innerText = quirkList[quirk3Roll].desc;
+
+  quirkArea.className = "card-area";
+
+  if (domWeapon.innerText == "All Weapons*") {
+    domInfoCard.className = "card";
+  } else {
+    domInfoCard.className = "hide card";
+  }
 }
 function rollDice(x) {
   return Math.floor(Math.random(1) * x);
