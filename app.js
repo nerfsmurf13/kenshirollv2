@@ -198,6 +198,7 @@ let quirkList = [
 ];
 
 let rollBtn = document.getElementById("roll-btn");
+let saveBtn = document.getElementById("save-btn");
 
 //init variables
 let quirk1Roll = 0;
@@ -238,6 +239,10 @@ let storySection = document.getElementById("story-section");
 
 rollBtn.addEventListener("click", function () {
   rollStory();
+});
+
+saveBtn.addEventListener("click", function () {
+  saveView();
 });
 
 //Rolls through the story elements.
@@ -310,4 +315,33 @@ function drawQuirks() {
 }
 function rollDice(x) {
   return Math.floor(Math.random(1) * x);
+}
+
+function saveView() {
+  // html2canvas(document.body, function (canvas) {
+  //   // document.body.appendChild(canvas);
+  //   return Canvas2Image.saveAsJPEG(canvas);
+  // });
+
+  html2canvas(document.body).then(function (canvas) {
+    return Canvas2Image.saveAsJPEG(
+      canvas,
+      document.body.offsetWidth,
+      document.body.offsetHeight,
+      saveFilenameGenerator()
+    );
+    // document.body.appendChild(canvas);
+  });
+}
+
+function saveFilenameGenerator() {
+  let d = new Date();
+  let date = d.getDate();
+  let month = d.getMonth() + 1;
+  let year = d.getFullYear();
+  let hour = d.getHours();
+  let minute = d.getMinutes();
+  let second = d.getSeconds();
+  let filename = "Kenshi-Story-" + date + "-" + month + "-" + year + "-" + hour + "-" + minute + "-" + second + ".jpg";
+  return filename;
 }

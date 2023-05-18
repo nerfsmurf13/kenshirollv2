@@ -15,26 +15,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kenshi Roll</title>
+    <meta
+      name="description"
+      content="Discover thrilling and challenging playthroughs with the Kenshi Random Story Generator. This powerful tool selects rules for players to follow, ensuring fun and exciting gameplay experiences. Immerse yourself in a vast 'Sword-Punk' style open world, where squad-based control and city-building elements merge seamlessly. Unleash your creativity and explore limitless possibilities in this free-roaming RPG adventure."
+    />
+    <title>Kenshi Random Story Generator</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <script src="app.js" async></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <script src="./scripts/html2canvas.min.js" async></script>
+    <script src="./scripts/canvas2image.js" async></script>
+    <script src="https://superal.github.io/canvas2image/canvas2image.js" async></script>
   </head>
   <body>
     <div class="container">
       <section class="title">
         <!-- <img src="./kenshi-logo.png" alt="Kenshi Logo" class="logo" /> -->
-        <div>Kenshi Random Story Generator</div>
+        <div>
+          <h1>Kenshi Random Story Generator</h1>
+          <h2>https://nerfsmurf13.github.io/kenshirollv2/</h2>
+        </div>
         <!-- <div>Kenshi</div> -->
         <!-- <div>Playthrough Roulette</div> -->
       </section>
       <section class="settings">
         <div class="settings-top">
-          Not sure how to play your next Kenshi Adventure? Look no further! Just hit "Roll" to generate a challenge for
-          you!
+          Enhance your Kenshi gameplay with the Kenshi Random Story Generator. Simply hit the 'Roll' button to generate
+          unique rules for challenging playthroughs. Let the generator shape your journey and unleash your imagination.
+          Embrace the excitement with each click!
         </div>
         <div><button class="btn" id="roll-btn">Roll!</button></div>
       </section>
@@ -98,6 +109,7 @@
               <div class="card-body" id="info-body"></div>
             </div>
           </section>
+          <div><button class="save-btn" id="save-btn">Save Screenshot</button></div>
         </div>
       </div>
       <!-- <div id="story-section">Story Section Here!</div> -->

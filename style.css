@@ -76,6 +76,17 @@ body {
   /* margin: var(--custom-margin); */
   margin: 2rem;
 }
+.save-btn {
+  border-radius: var(--custom-radius);
+
+  background-color: blue;
+  border: white 1px solid;
+  font-size: 2rem;
+  width: auto;
+  padding: var(--custom-padding);
+  /* margin: var(--custom-margin); */
+  margin: 2rem;
+}
 
 .title {
   /* padding: var(--custom-padding); */
@@ -84,6 +95,15 @@ body {
   color: #312c2a;
   background-color: rgba(0, 0, 0, var(--custom-alpha));
   font-size: 3rem;
+}
+
+.title h1 {
+  font-size: 3rem;
+  line-height: 2.8rem;
+}
+
+.title h2 {
+  font-size: 1.3rem;
 }
 
 .settings {
