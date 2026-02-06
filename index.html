@@ -31,6 +31,18 @@
     <script src="https://superal.github.io/canvas2image/canvas2image.js" async></script>
   </head>
   <body>
+    <div class="announcement-banner" id="announcement-banner">
+      <div class="announcement-content">
+        <span class="announcement-badge">NEW</span>
+        <span class="announcement-text">
+          <strong>OriginSmith</strong> is here — the modern Kenshi Story Generator with more features, better UI, and deeper lore.
+        </span>
+        <a href="https://originsmith.com/" target="_blank" rel="noopener noreferrer" class="announcement-cta">
+          Try it now &rarr;
+        </a>
+      </div>
+      <button class="announcement-close" id="announcement-close" aria-label="Dismiss announcement">&times;</button>
+    </div>
     <div class="container">
       <section class="title">
         <!-- <img src="./kenshi-logo.png" alt="Kenshi Logo" class="logo" /> -->
@@ -120,5 +132,14 @@
         >
       </footer>
     </div>
+    <script>
+      document.getElementById('announcement-close').addEventListener('click', function () {
+        document.getElementById('announcement-banner').style.display = 'none';
+        sessionStorage.setItem('bannerDismissed', 'true');
+      });
+      if (sessionStorage.getItem('bannerDismissed') === 'true') {
+        document.getElementById('announcement-banner').style.display = 'none';
+      }
+    </script>
   </body>
 </html>
